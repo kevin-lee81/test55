@@ -6,17 +6,17 @@
   <title>제이허브 - 주문제작형 카드제조 전문 업체</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
   <!-- jQuery 라이브러리 추가 -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- 다음 주소 API -->
-  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 <body>
   <!-- 헤더 영역 -->
   <header>
     <div class="container header-container">
-      <a href="index.html" class="logo">제이허브</a>
+      <a href="./index.html" class="logo">제이허브</a>
       <nav>
         <ul class="nav-menu">
           <li><a href="#about">회사소개</a></li>
@@ -702,6 +702,10 @@
       // fetch API를 사용하여 데이터 전송
       fetch(scriptURL, {
         method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Accept': 'application/json'
+        },
         body: formData
       })
       .then(response => {
